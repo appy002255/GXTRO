@@ -26,14 +26,6 @@ By downloading, using, or modifying this project, you acknowledge that you under
 
 
 
-
-
-
-
-
-
-
-
 如果您同意，請查看以下密碼：
 
 **密碼：123331170**
