@@ -146,3 +146,367 @@ _____ __ __ _______ _____ ____
 
 
 
+
+
+
+
+
+# Network Communication Tool
+
+A powerful cross-platform network communication tool that supports Windows and Linux systems.
+
+## Features
+
+- Send randomly generated data to specified IP and port
+- Multi-threaded sending for improved efficiency
+- Configurable number of sends and timeout
+- Support for fake IP addresses
+- Support for receiving server responses
+- Colored output interface
+- Progress bar display
+- Multi-language support (English/Chinese)
+- Disclaimer confirmation
+- Error handling and prompts
+- Cross-platform support (Windows/Linux)
+- TCP/UDP protocol selection
+- IPv6 support
+- Advanced network diagnostics:
+  * Traceroute
+  * DNS resolution time testing
+  * TCP connection analysis
+  * Bandwidth testing
+- Packet capture and analysis
+- Test configuration save/load
+
+## System Requirements
+
+- Python 3.x
+- Administrator privileges (required for raw sockets)
+- Dependencies:
+  - colorama
+  - tqdm
+  - scapy
+  - psutil
+  - pyyaml
+  - python-pcapng
+  - dnspython
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Interactive Mode
+
+1. Run the program as administrator:
+```bash
+python network_tool.py
+```
+
+2. Follow the prompts:
+   - Select language (1: English, 2: Chinese)
+   - Read and agree to the disclaimer
+   - Choose protocol (TCP/UDP)
+   - Choose IP version (IPv4/IPv6)
+   - Enter target IP address
+   - Enter target port (default 80)
+   - Enter number of sends (default 1)
+   - Enter timeout (default 5 seconds)
+   - Enter thread count (default 10)
+   - Choose whether to use fake IP
+   - Choose whether to receive server response
+   - Option to save configuration
+
+### Command Line Mode
+
+You can also run directly with command line parameters:
+```bash
+python network_tool.py <IP> <port> [sends] [timeout] [threads] [fake_ip(y/n)] [receive_response(y/n)]
+```
+
+### Network Diagnostics
+
+The tool provides comprehensive network diagnostics:
+- Traceroute to identify network path
+- DNS resolution time testing
+- TCP connection analysis
+- Bandwidth testing
+- Packet capture and analysis
+
+### Configuration Management
+
+- Save test configurations for future use
+- Load previously saved configurations
+- Automatic configuration backup
+
+### Parameter Description
+
+- `IP`: Target server IP address
+- `port`: Target server port number
+- `sends`: Optional, number of sends (default 1)
+- `timeout`: Optional, in seconds (default 5)
+- `threads`: Optional, number of concurrent threads (default 10)
+- `fake_ip`: Optional, y/n (default y)
+- `receive_response`: Optional, y/n (default n)
+
+### Examples
+
+```bash
+# Interactive mode
+python network_tool.py
+
+# Command line mode (with default parameters)
+python network_tool.py 192.168.1.100 80
+
+# Command line mode (with all parameters)
+python network_tool.py 192.168.1.100 80 5 10 20 y n
+```
+
+## Notes
+
+- Administrator privileges are required for raw sockets
+- Server responses cannot be received when using fake IP
+- Ensure the target server is running and listening on the specified port
+- Program will automatically exit if the target server doesn't respond within timeout
+- Random data includes letters, numbers, and punctuation
+- Please comply with local laws and regulations, use only in legally authorized environments
+
+## Disclaimer
+
+This tool is for educational and research purposes only. By using this tool, you agree to:
+
+1. Use this tool only in legally authorized environments
+2. Not use this tool for any illegal activities
+3. Take full responsibility for any consequences of using this tool
+4. Developer is not responsible for any misuse
+
+Using this tool indicates that you have read and agreed to these terms.
+
+---
+
+# 網絡通信工具
+
+這是一個功能強大的跨平台網絡通信工具，支持 Windows 和 Linux 系統。
+
+## 功能特點
+
+- 支持向指定IP和端口發送隨機生成的數據
+- 多線線程發送，提高效率
+- 可設置發送次數和超時時間
+- 支持使用假IP地址
+- 支持接收服務器響應
+- 彩色輸出界面
+- 進度條顯示
+- 多語言支持（英文/中文）
+- 免責聲明確認
+- 錯誤處理和提示
+- 跨平台支持（Windows/Linux）
+- TCP/UDP協議選擇
+- IPv6支持
+- 高級網絡診斷功能：
+  * 路由追蹤
+  * DNS解析時間測試
+  * TCP連接分析
+  * 帶寬測試
+- 數據包捕獲和分析
+- 測試配置保存/加載
+
+## 系統要求
+
+- Python 3.x
+- 管理員權限（使用原始套接字時需要）
+- 依賴包：
+  - colorama
+  - tqdm
+  - scapy
+  - psutil
+  - pyyaml
+  - python-pcapng
+  - dnspython
+
+## 安裝依賴
+
+```bash
+pip install -r requirements.txt
+```
+
+## 使用方法
+
+### 交互式模式
+
+1. 以管理員身份運行程序：
+```bash
+python network_tool.py
+```
+
+2. 按照提示操作：
+   - 選擇語言（1: 英文, 2: 中文）
+   - 閱讀並同意免責聲明
+   - 選擇協議（TCP/UDP）
+   - 選擇IP版本（IPv4/IPv6）
+   - 輸入目標IP地址
+   - 輸入目標端口（默認80）
+   - 輸入發送次數（默認1）
+   - 輸入超時時間（默認5秒）
+   - 輸入線程數（默認10）
+   - 選擇是否使用假IP
+   - 選擇是否接收服務器響應
+   - 可選保存配置
+
+### 命令行模式
+
+也可以使用命令行參數直接運行：
+```bash
+python network_tool.py <IP地址> <端口> [發送次數] [超時時間] [線程數] [是否使用假IP(y/n)] [是否接收響應(y/n)]
+```
+
+### 網絡診斷
+
+工具提供全面的網絡診斷功能：
+- 路由追蹤以識別網絡路徑
+- DNS解析時間測試
+- TCP連接分析
+- 帶寬測試
+- 數據包捕獲和分析
+
+### 配置管理
+
+- 保存測試配置以供將來使用
+- 加載之前保存的配置
+- 自動配置備份
+
+### 參數說明
+
+- `IP地址`: 目標服務器的IP地址
+- `端口`: 目標服務器的端口號
+- `發送次數`: 可選，發送數據的次數（默認為1）
+- `超時時間`: 可選，單位為秒（默認為5）
+- `線程數`: 可選，並發線程數量（默認為10）
+- `是否使用假IP`: 可選，y/n（默認為y）
+- `是否接收響應`: 可選，y/n（默認為n）
+
+### 使用示例
+
+```bash
+# 交互式模式
+python network_tool.py
+
+# 命令行模式（使用默認參數）
+python network_tool.py 192.168.1.100 80
+
+# 命令行模式（指定所有參數）
+python network_tool.py 192.168.1.100 80 5 10 20 y n
+```
+
+## 注意事項
+
+- 使用原始套接字需要管理員權限
+- 使用假IP時無法收到服務器響應
+- 請確保目標服務器正在運行並監聽指定的端口
+- 如果目標服務器沒有響應，程序會在超時後自動退出
+- 隨機數據包含字母、數字和標點符號
+- 請遵守當地法律法規，僅在合法授權的環境中使用本工具
+
+## 免責聲明
+
+本工具僅用於教育和研究目的。使用本工具時，您同意：
+
+1. 您將僅在合法授權的環境中使用本工具
+2. 您不會使用本工具進行任何非法活動
+3. 您對使用本工具造成的任何後果負全部責任
+4. 開發者不對任何不當使用承擔責任
+
+使用本工具即表示您已閱讀並同意以上條款。
+
+## Version History
+
+### v1.03 (2024-03-22)
+
+#### New Features
+- Added advanced network diagnosis functionality
+- Added traceroute feature with real-time output
+- Added comprehensive DNS record testing (A, MX, NS, TXT, SOA)
+- Added PTR record lookup for IP addresses
+- Added detailed network latency testing with statistics
+- Added real-time progress tracking for network tests
+- Added support for both TCP and UDP protocols
+- Added real-time output for all network tests
+
+#### Improvements
+- Enhanced error handling with detailed feedback
+- Improved thread synchronization and management
+- Added better protocol support detection
+- Enhanced network diagnosis with detailed results
+- Updated user interface with clearer prompts
+- Added real-time status updates during tests
+
+#### Bug Fixes
+- Fixed thread synchronization issues
+- Fixed socket timeout handling
+- Improved protocol detection accuracy
+- Fixed error message formatting
+- Fixed progress bar display issues
+- Fixed various thread-related race conditions
+
+### v1.02 (2024-03-21)
+
+#### New Features
+- Added port scanning option during network diagnosis
+- Added support for custom source IP addresses
+- Added CDN node detection
+- Added network latency measurement
+- Added packet loss rate calculation
+
+#### Improvements
+- Default port number is now 80
+- Network diagnosis now includes 10 test packets
+- Added support for multiple protocols (TCP, UDP, ICMP)
+- Added detailed error messages and warnings
+- Improved user interface with colored output
+
+#### Bug Fixes
+- Fixed issue with port scanning timeout
+- Fixed issue with network latency measurement
+- Fixed issue with packet loss calculation
+- Fixed issue with error handling in network diagnosis
+
+#### Changes
+- Network diagnosis now asks for port scanning permission
+- Added default values for all user inputs
+- Improved error handling and user prompts
+- Added support for both English and Traditional Chinese languages
+
+### v1.01 (2024-03-20)
+
+#### New Features
+- Added multi-language support (English/Chinese)
+- Added disclaimer confirmation
+- Added progress bar display
+- Added colored output interface
+
+#### Improvements
+- Improved error handling
+- Added user prompts for all inputs
+- Added default values for parameters
+- Added support for fake IP addresses
+
+#### Bug Fixes
+- Fixed issue with socket timeout
+- Fixed issue with thread management
+- Fixed issue with error messages
+- Fixed issue with user input validation
+
+### v1.00 (2024-03-19)
+
+#### Initial Release
+- Basic network communication functionality
+- Support for sending random data
+- Multi-threaded sending
+- Configurable parameters
+- Cross-platform support 
+
+
+
